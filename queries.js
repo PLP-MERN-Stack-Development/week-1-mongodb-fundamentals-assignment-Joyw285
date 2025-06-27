@@ -1,14 +1,14 @@
-// insert_books.js - Script to populate MongoDB with sample book data
+// Create the 'plp_bookstore' database and 'books' collection using MongoDB Shell
+// Save this as create_database.js 
 
-// Import MongoDB client
-const { MongoClient } = require('mongodb');
+// Switch to or create the database
+db = db.getSiblingDB('plp_bookstore');
 
-// Connection URI (replace with your MongoDB connection string if using Atlas)
-const uri = 'mongodb://localhost:27017';
+// Create the 'books' collection (MongoDB will auto-create it when data is inserted)
+db.createCollection('books');
 
-// Database and collection names
-const dbName = 'plp_bookstore';
-const collectionName = 'books';
+// Optional: Confirm creation
+db.getCollectionNames();
 
 // queries.js
 
